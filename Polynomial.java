@@ -16,10 +16,23 @@ public class Polynomial {
 	public Polynomial add(Polynomial px) {
 		// Takes a Polynomial argument and returns the sum of the calling object and the argument.
 
-		for (int i = 0; i < this.coefficients.length; i++) {
-			px.coefficients[i] += coefficients[i];
+		int new_length = Math.max(px.coefficients.length, this.coefficients.length);
+		
+		double [] new_coefficients = new double[new_length];
+		for (int i = 0; i < new_length; i++) {
+			new_coefficients[i] = 0;
+			if (i < this.coefficients.length) {
+				new_coefficients[i] += this.coefficients[i];
+			}
+			if (i < px.coefficients.length) {
+				new_coefficients[i] += px.coefficients[i];
+			}
+
 		}
-		return px;
+
+		Polynomial new_coef = new Polynomial(new_coefficients);
+		return new_coef;
+
 	}
 
 	// evaluate FUNCTION
