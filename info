@@ -1,4 +1,5 @@
-This is my work for lab 1 for CSCB07 Summer 2023.
+This is my work for lab 2 for CSCB07 Summer 2023.
 
-The class Polynomial contains the data of the polynomial using an array of doubles.
-Built-in functions for this class include a constructor, add() to add two polynomials, and evaluate() to evaluate the polynomial for a given value of x.
+The class Polynomial contains the data of the polynomial using an array of doubles (that contains non-zero coefficients), and an array of integers (containing non-negative powers of x).
+Built-in functions for this class include constructors, add() to add two polynomials, evaluate() to evaluate the polynomial for a given value of x, multiply() to multiply 2 polynomials, saveToFile() to save the polynomial in human-readable form in a text file.
+For lab 2, the functions from lab 1 have been modified to support the new way in which the polynomial is stored.
